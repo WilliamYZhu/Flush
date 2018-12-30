@@ -27,5 +27,20 @@ class Suit(Enum):
   HEARTS = 'hearts'
   DIAMONDS = 'diamonds'
   
+class PlayingCard:
+  def __init__(self, card_value, card_suit):
+    self.card = card_value
+    self.suit = card_suit
+    
+    
+#FUNCTIONS:
 
+def create_deck():
+  for suit in Suit:
+    for card in Card:
+      full_deck.append(PlayingCard(Card(card),Suit(suit)))
+  return full_deck
+  
+  
+  
  
