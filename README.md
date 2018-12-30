@@ -43,7 +43,7 @@ def create_deck():
       full_deck.append(PlayingCard(Card(card),Suit(suit)))
   return full_deck
   
-def draw_card(deck):
+def draw_four_cards(deck):
   rand_card = randint(0,len(deck),-1)
   return deck.pop(rand_card)
   
