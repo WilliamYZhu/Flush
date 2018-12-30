@@ -35,7 +35,7 @@ class PlayingCard:
     self.suit = card_suit
     
     
-#FUNCTIONS------------------
+#FUNCTION------------------
 
 def create_deck():
   for suit in Suit:
@@ -43,18 +43,18 @@ def create_deck():
       full_deck.append(PlayingCard(Card(card),Suit(suit)))
   return full_deck
   
-def draw_four_cards(deck):
+def draw_cards(deck):
   rand_card = randint(0,len(deck),-1)
   return deck.pop(rand_card)
   
+def draw_initial_cards(deck):
+  for i in 4:
+    draw_cards(deck)
+
   
 #MAIN-------------------------
   
 create_deck()
-partial_deck = list(full_deck)
-
-test_card = draw_card(partial_deck)
-print("You drew at ", test_card.card, test_card.suit)
 
   
  
